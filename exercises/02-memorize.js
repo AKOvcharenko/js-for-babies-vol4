@@ -17,7 +17,11 @@
  */
 
 function memorizeCreator(){
-
+  const args = [];
+  return (arg) => {
+    args.push(arg);
+    return args;
+  }
 }
 
 module.exports = memorizeCreator;
