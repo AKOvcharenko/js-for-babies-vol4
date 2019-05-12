@@ -12,7 +12,14 @@
  */
 
 function getSingletonCreator(){
+   let instance;
+   return () => {
+     if (!instance) {
+       instance = {};
+     }
 
+     return instance;
+   }
 }
 
 module.exports = getSingletonCreator;
