@@ -27,7 +27,7 @@
  */
 
 function bind(func, that){
-
+  return function() {return func.call(that);}
 }
 
 module.exports = bind;
